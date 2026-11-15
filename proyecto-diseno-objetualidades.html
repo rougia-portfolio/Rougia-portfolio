@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diseño de Objetualidades I — Rougia</title>
+  <link rel="icon" type="image/webp" href="img/logo.webp" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            montserrat: ['"Montserrat"', 'sans-serif'],
+          },
+          colors: {
+            cream: '#EAE2D3',
+            sand: '#E0D6C5',
+            ink: '#4A3B32',
+            muted: '#68625E',
+            rouge: '#5C1635',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-cream: #EAE2D3;
+      --nav-cream: rgba(242, 236, 225, 0.72);
+      --burgundy: #5C1635;
+      --text-dark: #4A3B32;
+      --title-light: #F4EFE6;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 68px;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--nav-cream);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+    }
+
+    .brand {
+      position: absolute;
+      left: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+
+    .brand-logo {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      padding-bottom: 2px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a.active {
+      color: var(--burgundy);
+      border-bottom: 1px solid var(--burgundy);
+    }
+
+    .nav-links a:hover {
+      color: var(--burgundy);
+    }
+
+    .no-widow {
+      text-wrap: pretty;
+    }
+
+    .logo-white {
+      filter: brightness(0) invert(1);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0 1.2rem;
+        justify-content: space-between;
+      }
+      .brand {
+        position: static;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased selection:bg-rouge selection:text-white">
+
+  <header class="navbar">
+    <a href="index.html" aria-label="Rougia, inicio" class="brand">
+      <img src="img/logo.webp" alt="Monograma Rougia" class="brand-logo" />
+      <span class="brand-name">Julieta Rougier</span>
+    </a>
+
+    <nav aria-label="Principal" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="universo-creativo.html">Universo creativo</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="pt-28 md:pt-36 pb-20 md:pb-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Enlace para Volver -->
+      <a href="portfolio.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted hover:text-rouge mb-12 transition-colors group">
+        <span class="transition-transform group-hover:-translate-x-1">←</span>
+        <span>Volver a Portfolio</span>
+      </a>
+
+      <!-- Parte Superior: Dos columnas -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start mb-16">
+        
+        <!-- Columna Izquierda: Título y Descripción -->
+        <div class="lg:col-span-6 space-y-6">
+          <h1 class="font-serif italic text-4xl sm:text-5xl lg:text-6xl text-rouge leading-[1.1] no-widow whitespace-nowrap">
+            Diseño de Objetualidades I
+          </h1>
+          <div class="text-base md:text-[17px] text-ink/85 leading-relaxed font-light space-y-5 no-widow">
+            <p>
+              Impetuoso, un movimiento rápido y agresivo que te agarra desprevenido. Bajo este concepto, empecé a diseñar la morfología que acompañaba esa sensación, terminando los extremos en punta enmarcando el rostro.
+            </p>
+            <p>
+              El objetivo era proponer un concepto y diseñar un módulo que al repetirse pudiera formar un objeto accesorio que englobe el tema a tratar. Luego desarrollar las fichas y datos técnicos, tomando fotografías del proceso constructivo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Ficha Técnica -->
+        <div class="lg:col-span-6 lg:self-end border-t border-ink/15 divide-y divide-ink/15 text-sm pt-2 lg:mb-1">
+          <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+            <span class="sm:col-span-4 text-[10px] uppercase tracking-[0.2em] text-rouge font-semibold">Rol</span>
+            <span class="sm:col-span-8 text-ink/90 font-light">
+              Diseñadora de accesorios y objetos híbridos
+            </span>
+          </div>
+          <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+            <span class="sm:col-span-4 text-[10px] uppercase tracking-[0.2em] text-rouge font-semibold">Tipo de Proyecto</span>
+            <span class="sm:col-span-8 text-ink/90 font-light">
+              Accesorio híbrido objetual
+            </span>
+          </div>
+          <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+            <span class="sm:col-span-4 text-[10px] uppercase tracking-[0.2em] text-rouge font-semibold">Fecha</span>
+            <span class="sm:col-span-8 text-ink/90 font-light">
+              Noviembre 2024
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Parte Media: Galería estructurada con tamaño equilibrado -->
+      <div class="py-12 border-t border-b border-ink/15 space-y-6">
+        <!-- Fila Superior: 2 Fotos editoriales con altura equilibrada para pantalla -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="aspect-[4/3] overflow-hidden bg-sand">
+            <img src="img/objetualidades1.webp" alt="Diseño de Objetualidades I - Vista editorial 1" class="w-full h-full object-cover object-center" />
+          </div>
+          <div class="aspect-[4/3] overflow-hidden bg-sand">
+            <img src="img/objetualidades-portada.webp" alt="Diseño de Objetualidades I - Vista editorial 2" class="w-full h-full object-cover object-center" />
+          </div>
+        </div>
+
+        <!-- Fila Inferior: 3 Láminas técnicas completas sobre fondo limpio -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="aspect-[4/3] overflow-hidden bg-white p-2 flex items-center justify-center border border-ink/10">
+            <img src="img/objetualidadesficha1.webp" alt="Ficha técnica y proceso constructivo 1" class="w-full h-full object-contain" />
+          </div>
+          <div class="aspect-[4/3] overflow-hidden bg-white p-2 flex items-center justify-center border border-ink/10">
+            <img src="img/objetualidadesficha2.webp" alt="Ficha técnica y geometrales 2" class="w-full h-full object-contain" />
+          </div>
+          <div class="aspect-[4/3] overflow-hidden bg-white p-2 flex items-center justify-center border border-ink/10">
+            <img src="img/objetualidadesficha3.webp" alt="Lámina de proceso y estudio morfológico 3" class="w-full h-full object-contain" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <div class="pt-16 md:pt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="proyecto-homenaje-animal.html" class="group flex items-center justify-between border border-ink/15 p-8 hover:bg-sand/35 transition-colors">
+          <div class="flex items-center gap-6">
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-rouge flex items-center justify-center text-cream transition-transform duration-300 group-hover:-translate-x-1 shrink-0">
+              <span class="text-xl md:text-2xl" aria-hidden="true">←</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase tracking-[0.22em] text-muted block">Proyecto anterior</span>
+              <span class="font-serif italic text-2xl sm:text-3xl text-rouge block">Homenaje animal</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="proyecto-diseno-objetualidades-ii.html" class="group flex items-center justify-between border border-ink/15 p-8 hover:bg-sand/35 transition-colors text-right">
+          <div class="flex items-center justify-between w-full gap-6">
+            <div class="space-y-1 w-full text-left md:text-right">
+              <span class="text-[10px] uppercase tracking-[0.22em] text-muted block">Siguiente proyecto</span>
+              <span class="font-serif italic text-2xl sm:text-3xl text-rouge block">Diseño de Objetualidades II</span>
+            </div>
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-rouge flex items-center justify-center text-cream transition-transform duration-300 group-hover:translate-x-1 shrink-0">
+              <span class="text-xl md:text-2xl" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-rouge text-[#F4EFE6] py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#F4EFE6]/15">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3.5">
+          <img src="img/logo.webp" alt="Logo Rougia" class="h-12 w-auto object-contain logo-white" />
+          <p class="font-serif italic text-4xl text-[#F4EFE6]">Rougia</p>
+        </div>
+        <p class="font-serif italic text-base text-[#F4EFE6]/80 max-w-xs">Diseños que desbordan la piel y el mundo.</p>
+      </div>
+
+      <nav aria-label="Contacto" class="flex flex-col space-y-3 text-sm">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Contacto</p>
+        <a href="index.html#presupuesto" class="text-[#F4EFE6]/90 hover:text-white transition-colors">Solicitá tu presupuesto</a>
+        <a href="cv-julieta-rougier.pdf" download class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors">
+          <span>Descargar CV</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </nav>
+
+      <div class="flex flex-col space-y-2.5 text-sm">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Seguime</p>
+        <a href="https://www.instagram.com/juuu.zvr/" target="_blank" rel="noreferrer" class="text-[#F4EFE6]/90 hover:text-white transition-colors">Instagram · @juuu.zvr</a>
+        <a href="https://www.linkedin.com/in/julieta-zvirzdinas-84a1a83b3/" target="_blank" rel="noreferrer" class="text-[#F4EFE6]/90 hover:text-white transition-colors">LinkedIn · Julieta Zvirzdinas</a>
+        <p class="text-[#F4EFE6]/65 pt-2">Desde la Patagonia Argentina hasta Buenos Aires</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-8 text-xs text-[#F4EFE6]/55">
+      <p>© 2026 Rougia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
