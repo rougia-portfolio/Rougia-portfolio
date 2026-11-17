@@ -184,8 +184,8 @@
     </section>
   </main>
 
-  <!-- =========================================================
-       FOOTER COMPARTIDO CON REPRODUCTOR FLOTANTE
+   <!-- =========================================================
+       7. FOOTER COMPARTIDO
        ========================================================= -->
   <footer class="bg-rouge text-[#F4EFE6] py-16 border-t border-[#F4EFE6]/15">
     <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#F4EFE6]/15">
@@ -201,13 +201,14 @@
         </p>
       </div>
 
-      <!-- Columna 2: Contacto (Con botón de Ver CV) -->
+      <!-- Columna 2: Contacto (Botón "Ver CV" que abre el modal flotante) -->
       <nav aria-label="Contacto" class="flex flex-col space-y-3 text-sm">
         <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Contacto</p>
         <a href="index.html#presupuesto" class="text-[#F4EFE6]/90 hover:text-white transition-colors">
           Solicitá tu presupuesto
         </a>
         
+        <!-- Botón que activa la ventana flotante del video CV -->
         <button onclick="abrirModalCV()" class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors text-left bg-transparent border-none cursor-pointer p-0 font-sans">
           <span>Ver CV</span>
           <span aria-hidden="true">↗</span>
@@ -239,12 +240,14 @@
   <div id="modalCV" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
     <div class="relative w-full max-w-2xl mx-4 bg-[#4A3B32] p-4 sm:p-6 rounded shadow-2xl border border-[#F4EFE6]/20">
       
+      <!-- Botón para cerrar la ventana flotante -->
       <button onclick="cerrarModalCV()" aria-label="Cerrar reproductor" class="absolute top-3 right-3 text-[#F4EFE6] hover:text-[#D48C70] text-2xl font-serif leading-none transition-colors">
         &times;
       </button>
 
       <p class="font-serif italic text-xl text-[#F4EFE6] mb-4 text-center">Video CV — Julieta Rougier</p>
 
+      <!-- Video con controles para pausar/reproducir -->
       <div class="w-full overflow-hidden rounded bg-black">
         <video id="videoCV" controls class="w-full max-h-[75vh] object-contain">
           <source src="video-cv.mp4" type="video/mp4">
@@ -255,180 +258,28 @@
     </div>
   </div>
 
+  <!-- Script para controlar la apertura y cierre del reproductor flotante -->
   <script>
     const modal = document.getElementById('modalCV');
     const video = document.getElementById('videoCV');
 
     function abrirModalCV() {
       modal.classList.remove('hidden');
-      video.play();
+      video.play(); // Inicia la reproducción automáticamente al abrir
     }
 
     function cerrarModalCV() {
       modal.classList.add('hidden');
-      video.pause();
-      video.currentTime = 0;
+      video.pause();  // Pausa el video al cerrar para que no siga sonando de fondo
+      video.currentTime = 0; // Reinicia el video al principio
     }
 
+    // Cierra el modal si hacen clic fuera del recuadro del video
     modal.addEventListener('click', function(e) {
       if (e.target === modal) {
         cerrarModalCV();
       }
     });
-  </script>
-
-  <script>
-    const PROJECTS = [
-      {
-        id: 1,
-        num: '01',
-        category: 'indumentaria',
-        categoryLabel: 'INDUMENTARIA',
-        date: 'Abril 2024',
-        title: 'Diseño de Indumentaria I',
-        summary: 'Diseño de Indumentaria',
-        url: 'disind1.html',
-        image: 'img/ind1.webp'
-      },
-      {
-        id: 2,
-        num: '02',
-        category: 'indumentaria',
-        categoryLabel: 'INDUMENTARIA',
-        date: 'Septiembre 2026',
-        title: 'Atávica — Diseño ético',
-        summary: 'Indumentaria ética',
-        url: 'proyecto-atavica.html',
-        image: 'img/ATAVICA.webp'
-      },
-      {
-        id: 3,
-        num: '03',
-        category: 'indumentaria',
-        categoryLabel: 'INDUMENTARIA',
-        date: 'Agosto-Septiembre 2026',
-        title: 'Aprés Le Portrait',
-        summary: 'Análisis de tendencias venideras bajo la ID de Valentino',
-        url: 'proyecto-apres-le-portrait.html',
-        image: 'img/APRESLEPORTRAIT.webp'
-      },
-      {
-        id: 4,
-        num: '04',
-        category: 'indumentaria',
-        categoryLabel: 'INDUMENTARIA',
-        date: 'Abril-Mayo 2025',
-        title: 'Homenaje animal<br><span class="font-normal">Indumentaria deportiva</span>',
-        summary: 'Camisetas de fútbol',
-        url: 'proyecto-homenaje-animal.html',
-        image: 'img/animalportada.webp'
-      },
-      {
-        id: 5,
-        num: '05',
-        category: 'accesorios',
-        categoryLabel: 'ACCESORIOS',
-        date: 'Noviembre 2024',
-        title: 'Diseño de Objetualidades I',
-        summary: 'Accesorio híbrido objetual',
-        url: 'proyecto-diseno-objetualidades.html',
-        image: 'img/objetualidades2i.webp'
-      },
-      {
-        id: 6,
-        num: '06',
-        category: 'accesorios',
-        categoryLabel: 'ACCESORIOS',
-        date: 'Noviembre 2024',
-        title: 'Diseño de Objetualidades II',
-        summary: 'Accesorio híbrido objetual',
-        url: 'proyecto-diseno-objetualidades-ii.html',
-        image: 'img/objetualidades2portada.webp'
-      },
-      {
-        id: 7,
-        num: '07',
-        category: 'estampas',
-        categoryLabel: 'ESTAMPAS',
-        date: 'Marzo-Junio 2026',
-        title: 'Tintorería y Estampación',
-        summary: 'Serigrafía textil y estampado de remeras',
-        url: 'proyecto-tintoreria-estampacion.html',
-        image: 'img/tintoreria-portada.webp'
-      },
-      {
-        id: 8,
-        num: '08',
-        category: 'estampas',
-        categoryLabel: 'ESTAMPAS',
-        date: 'Abril 2026',
-        title: 'Diseño Textil I<br><span class="font-normal">Comunidad Resiliente</span>',
-        summary: 'Estampas en raport',
-        url: 'proyecto-diseno-textil-i.html',
-        image: 'img/textil1-portada.webp'
-      },
-      {
-        id: 9,
-        num: '09',
-        category: 'estampas',
-        categoryLabel: 'ESTAMPAS',
-        date: 'Abril 2026',
-        title: 'Diseño Textil II<br><span class="font-normal">Concurrencia y contraste</span>',
-        summary: 'Estampas en raport',
-        url: 'proyecto-diseno-textil-ii.html',
-        image: 'img/textil2-portada.webp'
-      }
-    ];
-
-    const grid = document.getElementById('projects-grid');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    function renderProjects(filter = 'todos') {
-      const filtered = filter === 'todos' ? PROJECTS : PROJECTS.filter(p => p.category === filter);
-      grid.innerHTML = filtered.map(project => `
-        <a href="${project.url}" class="group flex flex-col focus:outline-none">
-          <div class="aspect-[4/5] overflow-hidden bg-sand mb-3.5 relative">
-            <img src="${project.image}" alt="${project.title.replace(/<[^>]*>/g, '')}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div class="flex items-baseline justify-between gap-2 text-[11px] mb-1.5">
-            <span class="uppercase tracking-[0.2em] text-rouge font-medium">
-              ${project.num} · ${project.categoryLabel}
-            </span>
-            <span class="text-muted font-light whitespace-nowrap">
-              ${project.date}
-            </span>
-          </div>
-          <h2 class="font-serif text-2xl sm:text-[26px] leading-snug text-ink group-hover:text-rouge transition-colors">
-            ${project.title}
-          </h2>
-          <p class="text-sm text-muted font-light mt-1">
-            ${project.summary}
-          </p>
-        </a>
-      `).join('');
-    }
-
-    function setActiveButton(filter) {
-      buttons.forEach(btn => {
-        const isActive = btn.dataset.filter === filter;
-        btn.className = isActive
-          ? 'filter-btn px-5 py-2.5 text-xs uppercase tracking-[0.2em] border border-rouge bg-rouge text-cream transition-colors'
-          : 'filter-btn px-5 py-2.5 text-xs uppercase tracking-[0.2em] border border-rouge/30 text-rouge hover:border-rouge transition-colors';
-      });
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-        setActiveButton(filter);
-        renderProjects(filter);
-      });
-    });
-
-    const params = new URLSearchParams(window.location.search);
-    const initialCat = params.get('cat') || 'todos';
-    setActiveButton(initialCat);
-    renderProjects(initialCat);
   </script>
 
 </body>

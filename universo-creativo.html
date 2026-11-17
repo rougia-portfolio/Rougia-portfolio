@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universo Creativo — Rougia | Julieta Rougier</title>
+  <title>Universo Creativo — Rougia</title>
   <link rel="icon" type="image/webp" href="img/logo.webp" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,14 +102,8 @@
       color: var(--burgundy);
     }
 
-    /* Evita renglones finales con una sola palabra suelta */
     .no-widow {
       text-wrap: pretty;
-    }
-
-    /* Convierte el logo a blanco puro sin alterar el tono */
-    .logo-white {
-      filter: brightness(0) invert(1);
     }
 
     @media (max-width: 768px) {
@@ -128,12 +122,8 @@
 </head>
 <body class="bg-cream text-ink font-sans antialiased selection:bg-rouge selection:text-white">
 
-  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-ink focus:text-cream focus:px-4 focus:py-2 focus:text-sm">
-    Saltar al contenido
-  </a>
-
   <!-- =========================================================
-       1. BARRA DE NAVEGACIÓN SUPERIOR
+       BARRA DE NAVEGACIÓN
        ========================================================= -->
   <header class="navbar">
     <a href="index.html" aria-label="Rougia, inicio" class="brand">
@@ -143,240 +133,36 @@
 
     <nav aria-label="Principal" class="nav-links">
       <a href="index.html">Home</a>
-      <a href="universo-creativo.html" aria-current="page" class="active">Universo creativo</a>
+      <a href="universo-creativo.html" class="active">Universo creativo</a>
       <a href="portfolio.html">Portfolio</a>
     </nav>
   </header>
 
-  <main id="contenido" class="pt-28 md:pt-32">
-    <!-- =========================================================
-         2. DETRÁS DE ROUGIA + MI CUERPO
-         ========================================================= -->
-    <section class="pb-10 md:pb-12">
-      <div class="max-w-7xl mx-auto px-6 md:px-12">
-        
-        <!-- Título superior -->
-        <div class="mb-8 md:mb-10">
-          <p class="text-xs uppercase tracking-[0.25em] text-rouge mb-2">Detrás de Rougia</p>
-          <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-normal text-rouge leading-[1.05]">
-            Julieta Rougier
-          </h1>
-        </div>
-
-        <!-- Imagen + Mi cuerpo -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div class="lg:col-span-5">
-            <div class="aspect-[4/4] overflow-hidden bg-sand">
-              <img 
-                src="img/julieta.webp" 
-                alt="Julieta Rougier" 
-                class="w-full h-full object-cover" 
-              />
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-6">
-            <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-rouge">
-              Mi cuerpo
-            </h2>
-
-            <div class="space-y-5 text-base sm:text-lg text-ink/85 leading-relaxed font-light">
-              <p class="no-widow">
-                Mis raíces comienzan en El Bolsón, en la Patagonia Argentina, donde el paisaje enseña a mirar despacio, a apreciar la belleza de las texturas y a habitar el espacio&nbsp;recorrido.
-              </p>
-              <p class="no-widow">
-                Me mudé a Capital Federal para estudiar la Licenciatura en Diseño de Indumentaria y Textil en UADE. Busco transformar mi sensibilidad en lenguaje, crear prendas que no solo vistan el cuerpo, sino también que crean atmósferas, despiertan emociones y habitan&nbsp;escenas.
-              </p>
-              <p class="no-widow">
-                Mi objetivo es diseñar para momentos que permanezcan en la memoria donde una prenda pueda convertirse en personaje, relato y&nbsp;recuerdo.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =========================================================
-         3. SECCIÓN EXPERIENCIA Y HABILIDADES
-         ========================================================= -->
-    <section id="habilidades" class="pt-6 md:pt-8 pb-20 md:pb-28 bg-cream text-ink">
-      <div class="max-w-7xl mx-auto px-6 md:px-12">
-        
-        <div class="mb-12">
-          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-rouge leading-none">
-            Experiencia y habilidades
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 border-t border-b border-ink/15">
-          
-          <!-- 1. Diseño de Moda -->
-          <div class="p-8 md:p-10 md:border-r md:border-b border-ink/15 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Diseño de Moda</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Desarrollo de colecciones y pronóstico de tendencias&nbsp;venideras.
-            </p>
-          </div>
-
-          <!-- 2. Figurines digitales -->
-          <div class="p-8 md:p-10 md:border-r md:border-b border-ink/15 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l7-7 3 3-7 7-3-3z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2 2l7.586 7.586" />
-                <circle cx="11" cy="11" r="2" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Figurines digitales</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Dibujos digitales de prendas o sistemas de conjuntos sobre el cuerpo&nbsp;modelo.
-            </p>
-          </div>
-
-          <!-- 3. Fichas Técnicas -->
-          <div class="p-8 md:p-10 md:border-b border-ink/15 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.3 15.3a2.4 2.4 0 010 3.4l-2.6 2.6a2.4 2.4 0 01-3.4 0L2.7 8.7a2.41 2.41 0 010-3.4l2.6-2.6a2.41 2.41 0 013.4 0l12.6 12.6z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14.5 12.5l2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Fichas Técnicas</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Armado de fichas técnicas de producto, geometrales con medidas y coste de&nbsp;producción.
-            </p>
-          </div>
-
-          <!-- 4. Fotografía Editorial -->
-          <div class="p-8 md:p-10 md:border-r border-ink/15 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
-                <circle cx="12" cy="13" r="4" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Fotografía Editorial</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Armado de catálogos editoriales, fotos detalle y lookbook donde se destacan las vistas del&nbsp;conjunto.
-            </p>
-          </div>
-
-          <!-- 5. Colorimetría -->
-          <div class="p-8 md:p-10 md:border-r border-ink/15 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-                <circle cx="7.5" cy="10.5" r="1" fill="currentColor" />
-                <circle cx="10.5" cy="7.5" r="1" fill="currentColor" />
-                <circle cx="15" cy="8.5" r="1" fill="currentColor" />
-                <circle cx="16.5" cy="12" r="1" fill="currentColor" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Colorimetría</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Selección de paletas de color que destacan los rasgos del modelo y acompañan las tipologías&nbsp;diseñadas.
-            </p>
-          </div>
-
-          <!-- 6. Estampas -->
-          <div class="p-8 md:p-10 space-y-3.5">
-            <div class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-rouge shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l4 7H8l4-7z" />
-                <rect x="4" y="14" width="6" height="6" rx="1" />
-                <circle cx="17" cy="17" r="3" />
-              </svg>
-              <h3 class="font-serif text-2xl text-ink">Estampas</h3>
-            </div>
-            <p class="text-sm text-muted leading-relaxed no-widow">
-              Colecciones de estampas de diseño único o raports, con variantes de&nbsp;color.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         4. SECCIÓN CONTACTO / FORMULARIO EDITORIAL
-         ========================================================= -->
-    <section id="contacto" class="relative py-24 md:py-32 text-[#F4EFE6] overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img src="img/presupuesto.webp" alt="" aria-hidden="true" class="w-full h-full object-cover object-center" />
-        <div class="absolute inset-0 bg-[#1B1715]/60"></div>
+  <!-- =========================================================
+       CONTENIDO DE UNIVERSO CREATIVO
+       ========================================================= -->
+  <main id="contenido" class="pt-28 md:pt-36 pb-20 md:pb-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="max-w-3xl mb-16 space-y-4">
+        <h1 class="font-serif italic text-4xl sm:text-5xl lg:text-6xl text-rouge leading-[1.1] no-widow">
+          Universo creativo
+        </h1>
+        <p class="text-base md:text-[17px] text-ink/85 leading-relaxed font-light no-widow">
+          Exploraciones conceptuales, referencias visuales y los universos estéticos que alimentan cada colección de Rougia.
+        </p>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <div class="lg:col-span-5 space-y-6">
-          <p class="text-xs uppercase tracking-[0.25em] text-[#F4EFE6]/75">Contacto</p>
-          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-[#F4EFE6] leading-[1.05]">
-            ¡Hablemos de ese proyecto que tanto deseás!
-          </h2>
-          <p class="text-base sm:text-lg text-[#F4EFE6]/95 leading-relaxed font-normal no-widow">
-            Estamos listos para transformar tu concepto en una experiencia&nbsp;sensorial.
-          </p>
-          <p class="text-sm text-[#F4EFE6]/80 leading-relaxed font-light no-widow">
-            Consultá por colaboraciones, desarrollo de colecciones o proyectos de estampados y comencemos a diseñar lo que llevás tanto tiempo&nbsp;pensando...
-          </p>
-          <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/70 pt-4">
-            Buenos Aires, Argentina
-          </p>
-        </div>
-
-        <div class="lg:col-span-7">
-          <form name="contacto-universo" method="POST" data-netlify="true" onsubmit="event.preventDefault(); alert('¡Gracias! Tu mensaje fue enviado correctamente.'); this.reset();" class="bg-cream/85 backdrop-blur-md text-ink p-8 sm:p-12 space-y-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div>
-                <label for="nombre-u" class="block text-[11px] uppercase tracking-[0.2em] text-ink/75 mb-2">Nombre</label>
-                <input type="text" id="nombre-u" name="nombre" required class="w-full bg-transparent border-b border-ink/30 py-2 text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-rouge" />
-              </div>
-              <div>
-                <label for="apellido-u" class="block text-[11px] uppercase tracking-[0.2em] text-ink/75 mb-2">Apellido</label>
-                <input type="text" id="apellido-u" name="apellido" required class="w-full bg-transparent border-b border-ink/30 py-2 text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-rouge" />
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div>
-                <label for="email-u" class="block text-[11px] uppercase tracking-[0.2em] text-ink/75 mb-2">Email</label>
-                <input type="email" id="email-u" name="email" required class="w-full bg-transparent border-b border-ink/30 py-2 text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-rouge" />
-              </div>
-              <div>
-                <label for="telefono-u" class="block text-[11px] uppercase tracking-[0.2em] text-ink/75 mb-2">Teléfono</label>
-                <input type="tel" id="telefono-u" name="telefono" placeholder="+54 9 11 ..." class="w-full bg-transparent border-b border-ink/30 py-2 text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-rouge" />
-              </div>
-            </div>
-
-            <div>
-              <label for="mensaje-u" class="block text-[11px] uppercase tracking-[0.2em] text-ink/75 mb-2">¿Qué te gustaría diseñar?</label>
-              <textarea id="mensaje-u" name="mensaje" rows="3" required class="w-full bg-transparent border-b border-ink/30 py-2 text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-rouge"></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-rouge text-cream text-xs uppercase tracking-[0.2em] font-medium hover:bg-ink transition-colors">
-                <span>Enviar</span>
-                <span aria-hidden="true">→</span>
-              </button>
-            </div>
-          </form>
-        </div>
-
+      <!-- Aquí va el contenido específico de tuiverso creativo -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Puedes mantener o agregar tus secciones aquí -->
       </div>
-    </section>
+
+    </div>
   </main>
 
-  <!-- =========================================================
-       5. FOOTER COMPARTIDO CON REPRODUCTOR FLOTANTE
+ <!-- =========================================================
+       7. FOOTER COMPARTIDO
        ========================================================= -->
   <footer class="bg-rouge text-[#F4EFE6] py-16 border-t border-[#F4EFE6]/15">
     <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#F4EFE6]/15">
@@ -392,13 +178,14 @@
         </p>
       </div>
 
-      <!-- Columna 2: Contacto (Con botón de Ver CV) -->
+      <!-- Columna 2: Contacto (Botón "Ver CV" que abre el modal flotante) -->
       <nav aria-label="Contacto" class="flex flex-col space-y-3 text-sm">
         <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Contacto</p>
         <a href="index.html#presupuesto" class="text-[#F4EFE6]/90 hover:text-white transition-colors">
           Solicitá tu presupuesto
         </a>
         
+        <!-- Botón que activa la ventana flotante del video CV -->
         <button onclick="abrirModalCV()" class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors text-left bg-transparent border-none cursor-pointer p-0 font-sans">
           <span>Ver CV</span>
           <span aria-hidden="true">↗</span>
@@ -430,12 +217,14 @@
   <div id="modalCV" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
     <div class="relative w-full max-w-2xl mx-4 bg-[#4A3B32] p-4 sm:p-6 rounded shadow-2xl border border-[#F4EFE6]/20">
       
+      <!-- Botón para cerrar la ventana flotante -->
       <button onclick="cerrarModalCV()" aria-label="Cerrar reproductor" class="absolute top-3 right-3 text-[#F4EFE6] hover:text-[#D48C70] text-2xl font-serif leading-none transition-colors">
         &times;
       </button>
 
       <p class="font-serif italic text-xl text-[#F4EFE6] mb-4 text-center">Video CV — Julieta Rougier</p>
 
+      <!-- Video con controles para pausar/reproducir -->
       <div class="w-full overflow-hidden rounded bg-black">
         <video id="videoCV" controls class="w-full max-h-[75vh] object-contain">
           <source src="video-cv.mp4" type="video/mp4">
@@ -446,21 +235,23 @@
     </div>
   </div>
 
+  <!-- Script para controlar la apertura y cierre del reproductor flotante -->
   <script>
     const modal = document.getElementById('modalCV');
     const video = document.getElementById('videoCV');
 
     function abrirModalCV() {
       modal.classList.remove('hidden');
-      video.play();
+      video.play(); // Inicia la reproducción automáticamente al abrir
     }
 
     function cerrarModalCV() {
       modal.classList.add('hidden');
-      video.pause();
-      video.currentTime = 0;
+      video.pause();  // Pausa el video al cerrar para que no siga sonando de fondo
+      video.currentTime = 0; // Reinicia el video al principio
     }
 
+    // Cierra el modal si hacen clic fuera del recuadro del video
     modal.addEventListener('click', function(e) {
       if (e.target === modal) {
         cerrarModalCV();
