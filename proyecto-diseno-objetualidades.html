@@ -246,8 +246,8 @@
     </div>
   </main>
 
- <!-- =========================================================
-       7. FOOTER COMPARTIDO
+  <!-- =========================================================
+       FOOTER UNIFICADO CON REPRODUCTOR FLOTANTE
        ========================================================= -->
   <footer class="bg-rouge text-[#F4EFE6] py-16 border-t border-[#F4EFE6]/15">
     <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#F4EFE6]/15">
@@ -263,14 +263,13 @@
         </p>
       </div>
 
-      <!-- Columna 2: Contacto (Botón "Ver CV" que abre el modal flotante) -->
+      <!-- Columna 2: Contacto (Con botón de Ver CV) -->
       <nav aria-label="Contacto" class="flex flex-col space-y-3 text-sm">
         <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Contacto</p>
         <a href="index.html#presupuesto" class="text-[#F4EFE6]/90 hover:text-white transition-colors">
           Solicitá tu presupuesto
         </a>
         
-        <!-- Botón que activa la ventana flotante del video CV -->
         <button onclick="abrirModalCV()" class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors text-left bg-transparent border-none cursor-pointer p-0 font-sans">
           <span>Ver CV</span>
           <span aria-hidden="true">↗</span>
@@ -302,14 +301,12 @@
   <div id="modalCV" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
     <div class="relative w-full max-w-2xl mx-4 bg-[#4A3B32] p-4 sm:p-6 rounded shadow-2xl border border-[#F4EFE6]/20">
       
-      <!-- Botón para cerrar la ventana flotante -->
       <button onclick="cerrarModalCV()" aria-label="Cerrar reproductor" class="absolute top-3 right-3 text-[#F4EFE6] hover:text-[#D48C70] text-2xl font-serif leading-none transition-colors">
         &times;
       </button>
 
       <p class="font-serif italic text-xl text-[#F4EFE6] mb-4 text-center">Video CV — Julieta Rougier</p>
 
-      <!-- Video con controles para pausar/reproducir -->
       <div class="w-full overflow-hidden rounded bg-black">
         <video id="videoCV" controls class="w-full max-h-[75vh] object-contain">
           <source src="video-cv.mp4" type="video/mp4">
@@ -320,23 +317,21 @@
     </div>
   </div>
 
-  <!-- Script para controlar la apertura y cierre del reproductor flotante -->
   <script>
     const modal = document.getElementById('modalCV');
     const video = document.getElementById('videoCV');
 
     function abrirModalCV() {
       modal.classList.remove('hidden');
-      video.play(); // Inicia la reproducción automáticamente al abrir
+      video.play();
     }
 
     function cerrarModalCV() {
       modal.classList.add('hidden');
-      video.pause();  // Pausa el video al cerrar para que no siga sonando de fondo
-      video.currentTime = 0; // Reinicia el video al principio
+      video.pause();
+      video.currentTime = 0;
     }
 
-    // Cierra el modal si hacen clic fuera del recuadro del video
     modal.addEventListener('click', function(e) {
       if (e.target === modal) {
         cerrarModalCV();
