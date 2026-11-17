@@ -203,7 +203,7 @@
       color: var(--title-light);
     }
 
-    /* --- SECCIÓN PROYECTOS (ACORDEÓN INTERACTIVO) --- */
+    /* --- SECCIÓN PROYECTOS --- */
     .collections-section {
       background-color: var(--bg-cream);
       color: var(--text-dark);
@@ -306,17 +306,10 @@
       margin-top: 0.85rem;
     }
 
-    /* Evita renglones finales con una sola palabra suelta */
     .no-widow {
       text-wrap: pretty;
     }
 
-    /* Convierte el logo a blanco puro sin alterar el tono */
-    .logo-white {
-      filter: brightness(0) invert(1);
-    }
-
-    /* --- RESPONSIVE CELULAR --- */
     @media (max-width: 900px) {
       .collections-accordion {
         flex-direction: column;
@@ -398,7 +391,7 @@
     </section>
 
     <!-- =========================================================
-         3. SECCIÓN PROYECTOS (ACORDEÓN INTERACTIVO)
+         3. SECCIÓN PROYECTOS
          ========================================================= -->
     <section class="collections-section">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
@@ -407,7 +400,6 @@
         </div>
 
         <div class="collections-accordion">
-          <!-- 01 Portfolio -->
           <a href="portfolio.html" class="collection-card">
             <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/7adebf08.webp&w=1000&fm=webp&q=75" alt="Portfolio Rougia" loading="lazy" />
             <div class="collection-overlay"></div>
@@ -420,7 +412,6 @@
             </div>
           </a>
 
-          <!-- 02 Indumentaria -->
           <a href="portfolio.html?cat=indumentaria" class="collection-card">
             <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/b58c5811.webp&w=1000&fm=webp&q=75" alt="Indumentaria Rougia" loading="lazy" />
             <div class="collection-overlay"></div>
@@ -428,12 +419,11 @@
               <span class="collection-num">02</span>
               <h3 class="collection-title">Indumentaria</h3>
               <p class="collection-desc">
-                La indumentaria interpela mi vida hace ya varios años. Desde hace 5 que comencé a diseñar las primeras prendas y ahora, colecciones. Cada proyecto conlleva varios meses de trabajo, iniciando con una investigación del tema a abordar...
+                La indumentaria interpela mi vida hace ya varios años. Desde hace 5 que comencé a diseñar las primeras prendas y ahora, colecciones. Cada proyecto conlleva varios meses de trabajo...
               </p>
             </div>
           </a>
 
-          <!-- 03 Estampas -->
           <a href="portfolio.html?cat=estampas" class="collection-card">
             <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/bb9f9b3a.webp&w=1000&fm=webp&q=75" alt="Estampas Rougia" loading="lazy" />
             <div class="collection-overlay"></div>
@@ -441,12 +431,11 @@
               <span class="collection-num">03</span>
               <h3 class="collection-title">Estampas</h3>
               <p class="collection-desc">
-                En esta sección podrán encontrar diversos proyectos y trabajos donde a través de un concepto, desarrollé mini colecciones de estampas con variantes de color y su aplicación textil en producto terminado.
+                En esta sección podrán encontrar diversos proyectos y trabajos donde a través de un concepto, desarrollé mini colecciones de estampas con variantes de color...
               </p>
             </div>
           </a>
 
-          <!-- 04 Accesorios -->
           <a href="portfolio.html?cat=accesorios" class="collection-card">
             <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/29d3ca16.webp&w=1000&fm=webp&q=75" alt="Accesorios Rougia" loading="lazy" />
             <div class="collection-overlay"></div>
@@ -454,7 +443,7 @@
               <span class="collection-num">04</span>
               <h3 class="collection-title">Accesorios</h3>
               <p class="collection-desc">
-                El diseño de objetualidades y artefactos híbridos me permitió explorar el cuerpo a partir de accesorios no convencionales, derivados de conceptos abstractos, proponiéndoles una morfología y ergonomía específicas.
+                El diseño de objetualidades y artefactos híbridos me permitió explorar el cuerpo a partir de accesorios no convencionales, derivados de conceptos abstractos...
               </p>
             </div>
           </a>
@@ -467,37 +456,22 @@
          ========================================================= -->
     <section id="manifiesto" class="py-20 md:py-28 bg-rouge text-[#F4EFE6]">
       <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <!-- Foto rectangular en su proporción original -->
         <div class="lg:col-span-5">
           <div class="w-full overflow-hidden bg-ink/30">
-            <img 
-              src="https://rougia-website.netlify.app/.netlify/images?url=/img/8a494282.webp&w=900&fm=webp&q=75" 
-              alt="Prenda roja suspendida entre hilos" 
-              loading="lazy" 
-              class="w-full h-auto block" 
-            />
+            <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/8a494282.webp&w=900&fm=webp&q=75" alt="Prenda roja suspendida entre hilos" loading="lazy" class="w-full h-auto block" />
           </div>
         </div>
-
-        <!-- Columna de texto -->
         <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
-          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-[#F4EFE6]">
-            Manifiesto
-          </h2>
-
+          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-[#F4EFE6]">Manifiesto</h2>
           <div class="space-y-4 text-base sm:text-lg text-[#F4EFE6]/90 leading-relaxed font-light">
             <p>En Rougia se comprende a la indumentaria como vestigios de una voz propia diseñados para conmover al mundo.</p>
             <p>Busco transformar la mirada de quien observa y conmocionar sus sentidos despertando un pulso en su interior.</p>
-            <p>Planifico mis piezas con un propósito profundo cuyo significado no culmina a simple vista, sino que se revela en cada mirada como un territorio por explorar.</p>
-            <p>Rougia nace desde mis profundidades para contar historias que emergen, con detalles que despiertan y formas que movilizan.</p>
+            <p>Planifico mis piezas con un propósito profundo cuyo significado no culmina a simple vista, sino que se revela en cada mirada.</p>
           </div>
-
           <blockquote class="pt-1 border-l border-[#F4EFE6]/60 pl-5 font-serif italic text-xl sm:text-2xl lg:whitespace-nowrap text-[#F4EFE6]">
             Diseño no para vestir el cuerpo, sino para desbordar la piel.
           </blockquote>
         </div>
-
       </div>
     </section>
 
@@ -506,101 +480,61 @@
          ========================================================= -->
     <section id="servicios" class="py-20 md:py-28 bg-sand/60 border-t border-ink/10">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
-        
-        <!-- Título Servicios y subtítulo debajo -->
         <div class="mb-14 space-y-2">
-          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-rouge">
-            Servicios
-          </h2>
-          <p class="font-serif italic text-2xl sm:text-3xl text-ink/90">
-            ¿Qué te gustaría que diseñemos?
-          </p>
+          <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-rouge">Servicios</h2>
+          <p class="font-serif italic text-2xl sm:text-3xl text-ink/90">¿Qué te gustaría que diseñemos?</p>
         </div>
-
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <li class="space-y-4">
             <div class="aspect-[4/5] overflow-hidden bg-cream">
               <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/5fdd7a77.webp&w=700&fm=webp&q=75" alt="Escenografías corporales" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <h3 class="font-serif text-2xl text-left pt-1">Escenografías corporales</h3>
-            <p class="text-sm text-muted leading-relaxed text-left no-widow">
-              Prendas conceptuales únicas que transmitan la esencia de tu expresión personal y acompañen el contexto. Ideal para eventos musicales, proyectos audiovisuales y&nbsp;escenográficos.
-            </p>
+            <p class="text-sm text-muted leading-relaxed text-left no-widow">Prendas conceptuales únicas que transmitan la esencia de tu expresión personal.</p>
           </li>
-
           <li class="space-y-4">
             <div class="aspect-[4/5] overflow-hidden bg-cream">
               <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/235cfa63.webp&w=700&fm=webp&q=75" alt="Desarrollo de colección" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <h3 class="font-serif text-2xl text-left pt-1">Desarrollo de colección</h3>
-            <p class="text-sm text-muted leading-relaxed text-left no-widow">
-              Líneas de producto para la próxima temporada, manteniendo la identidad de tu marca y ajustándonos a las tendencias&nbsp;futuras.
-            </p>
+            <p class="text-sm text-muted leading-relaxed text-left no-widow">Líneas de producto para la próxima temporada manteniendo la identidad de tu marca.</p>
           </li>
-
           <li class="space-y-4">
             <div class="aspect-[4/5] overflow-hidden bg-cream">
               <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/391b7a37.webp&w=700&fm=webp&q=75" alt="Diseño de estampados" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <h3 class="font-serif text-2xl text-left pt-1">Diseño de estampados</h3>
-            <p class="text-sm text-muted leading-relaxed text-left no-widow">
-              Estampados conceptuales que se adapten a tus necesidades de producto, desarrollados con sus respectivas variantes de&nbsp;color.
-            </p>
+            <p class="text-sm text-muted leading-relaxed text-left no-widow">Estampados conceptuales adaptados a tus necesidades de producto.</p>
           </li>
-
           <li class="space-y-4">
             <div class="aspect-[4/5] overflow-hidden bg-cream">
               <img src="https://rougia-website.netlify.app/.netlify/images?url=/img/d4634bd3.webp&w=700&fm=webp&q=75" alt="Asesorías de Imagen" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <h3 class="font-serif text-2xl text-left pt-1">Asesorías de Imagen</h3>
-            <p class="text-sm text-muted leading-relaxed text-left no-widow">
-              Tests de colorimetría, visagismo y tipología corporal para destacar tu imagen personal. Armados de conjuntos para sesiones fotográficas y&nbsp;foto-producto.
-            </p>
+            <p class="text-sm text-muted leading-relaxed text-left no-widow">Tests de colorimetría, visagismo y tipología corporal.</p>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- =========================================================
-         6. SECCIÓN PRESUPUESTO (FORMULARIO + MOÑO CENTRADO SIN FONDO)
+         6. SECCIÓN PRESUPUESTO
          ========================================================= -->
     <section id="presupuesto" class="py-20 md:py-28 bg-rouge text-[#F4EFE6]">
       <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-        
         <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-[#F4EFE6] leading-none">
-              Solicitá tu presupuesto
-            </h2>
-            <p class="text-base sm:text-lg text-[#F4EFE6] font-medium pt-2 lg:whitespace-nowrap">
-              ¡Nos encantaría formar parte de tu próximo proyecto!
-            </p>
-            <p class="text-sm sm:text-base text-[#F4EFE6]/85 font-light lg:whitespace-nowrap">
-              Completá con tus datos y comentanos tu idea brevemente.
-            </p>
+            <h2 class="font-serif italic text-5xl sm:text-6xl font-normal text-[#F4EFE6] leading-none">Solicitá tu presupuesto</h2>
+            <p class="text-base sm:text-lg text-[#F4EFE6] font-medium pt-2 lg:whitespace-nowrap">¡Nos encantaría formar parte de tu próximo proyecto!</p>
           </div>
-
-          <!-- Lazo centrado debajo del texto, con fondo oscuro removido por completo -->
           <div class="flex-1 flex items-center justify-center pt-2">
             <svg viewBox="0 0 400 400" class="w-full max-w-[270px] max-h-[300px] h-auto overflow-visible" role="img" aria-label="Lazo decorativo Rougia">
               <defs>
                 <filter id="remove-black-lazo" color-interpolation-filters="sRGB">
-                  <feColorMatrix type="matrix" values="
-                    1 0 0 0 0
-                    0 1 0 0 0
-                    0 0 1 0 0
-                    1.5 1.5 1.5 0 -0.25" />
+                  <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1.5 1.5 1.5 0 -0.25" />
                 </filter>
               </defs>
-              <image 
-                href="img/mono-lazo.png.jpeg" 
-                x="0" 
-                y="0" 
-                width="400" 
-                height="400" 
-                preserveAspectRatio="xMidYMid meet" 
-                filter="url(#remove-black-lazo)" 
-              />
+              <image href="img/mono-lazo.png.jpeg" x="0" y="0" width="400" height="400" preserveAspectRatio="xMidYMid meet" filter="url(#remove-black-lazo)" />
             </svg>
           </div>
         </div>
@@ -628,13 +562,12 @@
           </div>
           <div>
             <label for="mensaje" class="block text-xs uppercase tracking-wider text-muted mb-2">Describí tu proyecto</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Plazos estimados, referencias, tipo de piezas..." class="w-full bg-[#F4EFE6] border border-ink/20 px-4 py-3 text-sm text-ink focus:outline-none focus:border-rouge"></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Plazos estimados, referencias..." class="w-full bg-[#F4EFE6] border border-ink/20 px-4 py-3 text-sm text-ink focus:outline-none focus:border-rouge"></textarea>
           </div>
           <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-rouge text-cream text-xs uppercase tracking-[0.2em] hover:bg-ink transition-colors">
             Enviar consulta
           </button>
         </form>
-
       </div>
     </section>
   </main>
@@ -645,7 +578,7 @@
   <footer class="bg-rouge text-[#F4EFE6] py-16 border-t border-[#F4EFE6]/15">
     <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#F4EFE6]/15">
       
-      <!-- Columna 1: Logo PNG blanco + Rougia + Bajada alineados a la izquierda -->
+      <!-- Columna 1 -->
       <div class="flex flex-col items-start text-left space-y-4">
         <div class="flex items-center justify-start">
           <img src="img/logo-rougia-blanco.png" alt="Logo Rougia" class="h-12 w-auto object-contain -ml-3 -mr-2" />
@@ -656,16 +589,18 @@
         </p>
       </div>
 
-      <!-- Columna 2: Contacto -->
+      <!-- Columna 2: Contacto (Botón "Ver CV" que abre el modal flotante) -->
       <nav aria-label="Contacto" class="flex flex-col space-y-3 text-sm">
         <p class="text-xs uppercase tracking-[0.22em] text-[#F4EFE6]/55 mb-1">Contacto</p>
         <a href="index.html#presupuesto" class="text-[#F4EFE6]/90 hover:text-white transition-colors">
           Solicitá tu presupuesto
         </a>
-        <a href="cv-julieta-rougier.pdf" download class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors">
-          <span>Descargar CV</span>
-          <span aria-hidden="true">↓</span>
-        </a>
+        
+        <!-- Botón que activa la ventana flotante del video CV -->
+        <button onclick="abrirModalCV()" class="inline-flex items-center gap-2 text-[#F4EFE6]/90 hover:text-white transition-colors text-left bg-transparent border-none cursor-pointer p-0 font-sans">
+          <span>Ver CV</span>
+          <span aria-hidden="true">↗</span>
+        </button>
       </nav>
 
       <!-- Columna 3: Seguime -->
@@ -686,6 +621,54 @@
       <p>© 2026 Rougia. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <!-- =========================================================
+       REPRODUCTOR FLOTANTE (MODAL DE VIDEO CV)
+       ========================================================= -->
+  <div id="modalCV" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-2xl mx-4 bg-[#4A3B32] p-4 sm:p-6 rounded shadow-2xl border border-[#F4EFE6]/20">
+      
+      <!-- Botón para cerrar la ventana flotante -->
+      <button onclick="cerrarModalCV()" aria-label="Cerrar reproductor" class="absolute top-3 right-3 text-[#F4EFE6] hover:text-[#D48C70] text-2xl font-serif leading-none transition-colors">
+        &times;
+      </button>
+
+      <p class="font-serif italic text-xl text-[#F4EFE6] mb-4 text-center">Video CV — Julieta Rougier</p>
+
+      <!-- Video con controles para pausar/reproducir -->
+      <div class="w-full overflow-hidden rounded bg-black">
+        <video id="videoCV" controls class="w-full max-h-[75vh] object-contain">
+          <source src="video-cv.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script para controlar la apertura y cierre del reproductor flotante -->
+  <script>
+    const modal = document.getElementById('modalCV');
+    const video = document.getElementById('videoCV');
+
+    function abrirModalCV() {
+      modal.classList.remove('hidden');
+      video.play(); // Inicia la reproducción automáticamente al abrir
+    }
+
+    function cerrarModalCV() {
+      modal.classList.add('hidden');
+      video.pause();  // Pausa el video al cerrar para que no siga sonando de fondo
+      video.currentTime = 0; // Reinicia el video al principio
+    }
+
+    // Cierra el modal si hacen clic fuera del recuadro del video
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        cerrarModalCV();
+      }
+    });
+  </script>
 
 </body>
 </html>
